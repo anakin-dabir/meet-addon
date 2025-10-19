@@ -6,15 +6,32 @@
   let sidePanelClient;
   let name = "Google Meet Add-on (Svelte)";
 
-  const CLOUD_PROJECT_NUMBER = '463441100745';
+  const CLOUD_PROJECT_NUMBER = '829040809073';
   const MAIN_STAGE_URL = 'https://portfolio-hzfd.vercel.app/main'; // Update this
 
-  async function startActivity() {
+   async function startActivity() {
+    error = "";
     try {
+      const res = await fetch('https://extranet.proexsus.com/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: "zaildarroyalgarden@gmail.com", password: "1234" })
+      });
+
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+
+      const data = await res.json();
+      console.log('Login success:', data);
+
+      // Example: you might want to store the token temporarily
+      // localStorage.setItem('authToken', data.token);
+
       await goto('/main');
     } catch (err) {
-      console.error('Navigation failed:', err);
-      error = 'Failed to navigate to main stage.';
+      console.error('Login failed:', err);
+      error = 'Login failed. Please check your credentials.';
     }
   }
 

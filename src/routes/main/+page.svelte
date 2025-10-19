@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
   import { meet } from '@googleworkspace/meet-addons/meet.addons';
 
-  const CLOUD_PROJECT_NUMBER = '463441100745';
+  const CLOUD_PROJECT_NUMBER = '829040809073';
 
   onMount(async () => {
     try {
