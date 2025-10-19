@@ -11,7 +11,7 @@
 
    async function startActivity() {
     try {
-      const res = await fetch('https://extranet.proexsus.com/api/auth/login', {
+      const res = await fetch('https://ac9228de411c.ngrok-free.app/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: "zaildarroyalgarden@gmail.com", password: "1234" })
