@@ -1,6 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import { meet } from '@googleworkspace/meet-addons/meet.addons';
+  import { goto } from '$app/navigation';
 
   let sidePanelClient;
   let name = "Google Meet Add-on (Svelte)";
@@ -9,17 +10,11 @@
   const MAIN_STAGE_URL = 'https://portfolio-hzfd.vercel.app/main'; // Update this
 
   async function startActivity() {
-    if (!sidePanelClient) {
-      console.error("Side Panel Client not initialized");
-      return;
-    }
-
     try {
-      await sidePanelClient.startActivity({
-        mainStageUrl: MAIN_STAGE_URL
-      });
+      await goto('/main');
     } catch (err) {
-      console.error("Failed to start activity:", err);
+      console.error('Navigation failed:', err);
+      error = 'Failed to navigate to main stage.';
     }
   }
 
