@@ -10,7 +10,6 @@
   const MAIN_STAGE_URL = 'https://portfolio-hzfd.vercel.app/main'; // Update this
 
    async function startActivity() {
-    error = "";
     try {
       const res = await fetch('https://extranet.proexsus.com/api/auth/login', {
         method: 'POST',
@@ -31,7 +30,6 @@
       await goto('/main');
     } catch (err) {
       console.error('Login failed:', err);
-      error = 'Login failed. Please check your credentials.';
     }
   }
 
