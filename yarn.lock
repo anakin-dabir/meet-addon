@@ -154,6 +154,11 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.25.11.tgz#5ecda6f3fe138b7e456f4e429edde33c823f392f"
   integrity sha512-D7Hpz6A2L4hzsRpPaCYkQnGOotdUpDzSGRIv9I+1ITdHROSFUWW95ZPZWQmGka1Fg7W3zFJowyn9WGwMJ0+KPA==
 
+"@googleworkspace/meet-addons@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@googleworkspace/meet-addons/-/meet-addons-1.2.0.tgz#5f7eebf21e0ac8307cf1ab87fb566b6c2a17b593"
+  integrity sha512-UNyyJZ5x+NiD51OKATw7n6iUmVyaoTyLmMwKR+Bvwe9YkPw0Y45SZwa1Gev8YkJaiQJ/zo23Zhv0cH/QYnxuOQ==
+
 "@isaacs/fs-minipass@^4.0.0":
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/@isaacs/fs-minipass/-/fs-minipass-4.0.1.tgz#2d59ae3ab4b38fb4270bfa23d30f8e2e86c7fe32"
